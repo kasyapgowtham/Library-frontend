@@ -39,6 +39,7 @@ export default function Register() {
         }
       }
             );
+            console.log(response);
             setMessage('Registration successful!');
             setFormData({
                 studentId: '',
