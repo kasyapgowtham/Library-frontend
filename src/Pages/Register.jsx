@@ -32,7 +32,12 @@ export default function Register() {
         try {
             const response = await axios.post(
                 'library-backend-production-a99c.up.railway.app/api/Library/register',
-                formData
+                formData,
+                      {
+        headers: {
+          "Content-Type": "application/json"
+        }
+      }
             );
             setMessage('Registration successful!');
             setFormData({

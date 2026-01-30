@@ -13,7 +13,13 @@ export default function Login() {
             const response = await axios.post('library-backend-production-a99c.up.railway.app/api/Library/Login', {
                 studentId:studentId,
                 StudentPassword:password,
-            });
+            },
+                  {
+        headers: {
+          "Content-Type": "application/json"
+        }
+      }
+        );
             console.log('Login successful:', response.data);
             navigate('/home');
         } catch (error) {
