@@ -30,7 +30,7 @@ export default function PaymentPage() {
     };
     const makepayment=()=>{
         try{
-            const response=axios.post('  https://marcelene-isoamyl-needingly.ngrok-free.dev/api/Library/payment',{
+            const response=axios.post(' library-backend-production-a99c.up.railway.app/api/Library/payment',{
             Email:formData.email,
             Amount:formData.amount,
             cardnumber:formData.cardNumber,
