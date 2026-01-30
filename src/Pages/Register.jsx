@@ -15,7 +15,7 @@ export default function Register() {
 
     const [loading, setLoading] = useState(false);
     const [message, setMessage] = useState('');
-
+    const API_BASE = "https://library-backend-production-a99c.up.railway.app";
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prev) => ({
@@ -31,7 +31,7 @@ export default function Register() {
 
         try {
             const response = await axios.post(
-                'library-backend-production-a99c.up.railway.app/api/Library/register',
+                `${API_BASE}/api/Library/register`,
                 formData,
                       {
         headers: {
