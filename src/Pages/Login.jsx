@@ -14,6 +14,11 @@ export default function Login() {
                 studentId:studentId,
                 StudentPassword:password,
             },
+             {
+    headers: {
+      "Content-Type": "application/json"
+    }
+  }
         );
             console.log('Login successful:', response.data);
             navigate('/home');
