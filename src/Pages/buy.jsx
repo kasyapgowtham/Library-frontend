@@ -16,6 +16,7 @@ export default function PaymentPage() {
         amount: book?.price || '',
     });
     const[message,setMessage]=useState('');
+    const API_BASE = "https://library-backend-production-a99c.up.railway.app";
     const handleChange = (e) => {
         setFormData({
             ...formData,
@@ -30,7 +31,7 @@ export default function PaymentPage() {
     };
     const makepayment=()=>{
         try{
-            const response=axios.post(' library-backend-production-a99c.up.railway.app/api/Library/payment',{
+            const response=axios.post(`${API_BASE}/api/Library/payment`,{
             Email:formData.email,
             Amount:formData.amount,
             cardnumber:formData.cardNumber,

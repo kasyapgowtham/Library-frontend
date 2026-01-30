@@ -7,10 +7,10 @@ export default function Login() {
     const [studentId, setStudentId] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
-
+      const API_BASE = "https://library-backend-production-a99c.up.railway.app";
     const handleLogin = async () => {
         try {
-            const response = await axios.post('library-backend-production-a99c.up.railway.app/api/Library/Login', {
+            const response = await axios.post(`${API_BASE}/api/Library/Login`, {
                 studentId:studentId,
                 StudentPassword:password,
             },
