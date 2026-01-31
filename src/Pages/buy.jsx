@@ -38,7 +38,13 @@ export default function PaymentPage() {
             cardholdernname:formData.cardName,
             Expiry:formData.expiry,
             CVV:formData.cvv
-        })
+        },
+                    {
+    headers: {
+      "Content-Type": "application/json"
+    }
+  }
+    )
         if(response.status===200){
             setMessage('Payment successful!');
             navigate('/home');
